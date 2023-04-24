@@ -21,6 +21,8 @@ enum torn_layers { _QWERTY, _SECONDARY };
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
+#define S_SPC LT(_SECONDARY, KC_SPC)
+
 /* Qwerty
  * ,-----------------------------------------.    ,-----------------------------------------.
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |    |   Y  |   U  |   I  |   O  |   P  |  [   |
@@ -36,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,
     KC_GRV,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     KC_LEFT_SHIFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RBRC ,
-            TG(_SECONDARY), KC_LEFT_GUI, KC_ENTER,  KC_LCTL,    KC_BSPC,  LT(_SECONDARY, KC_SPC),   KC_RIGHT_GUI, KC_MEDIA_PLAY_PAUSE
+            TG(_SECONDARY), KC_LEFT_GUI, KC_ENTER,  KC_LCTL,    KC_BSPC,  S_SPC,  KC_RIGHT_GUI, KC_MEDIA_PLAY_PAUSE
 ),
 
 /* SECONDARY
