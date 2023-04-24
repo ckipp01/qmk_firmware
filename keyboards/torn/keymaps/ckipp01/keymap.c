@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|    |------+------+------+------+------+------|
  * | =    |   1  |   2  |   3  |   4  |   5  |    |   6  |   7  |   8  |   9  |   0  |  -   |
  * |------+------+------+------+------+------|    |------+------+------+------+------+------|
- * | _    |      |      |      |      |      |    |      |      |   ,  |   .  |   /  |  +   |
+ * | _    |      |      |      | Up   | Down |    | Left |Right |   ,  |   .  |   /  |  +   |
  * |------+------+------+------+------+------|    |------+------+------+------+------+------|
  *               | ____ | Ctrl | Bksp | Del  |    |Enter |Space | Alt  | ____ |
  *               |      |      |Shift |Raise |    | Gui  |Lower |      |      |
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SECONDARY] = LAYOUT_split_3x6_4(
     KC_ESC,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
     KC_EQL,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PMNS,
-    KC_UNDS, _______, _______, _______, _______, _______,   _______, _______, KC_COMM, KC_DOT,  KC_SLSH, KC_PPLS,
+    KC_UNDS, _______, _______, _______, KC_UP, KC_DOWN,   KC_LEFT, KC_RIGHT, KC_COMM, KC_DOT,  KC_SLSH, KC_PPLS,
                       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 )
 // clang-format on
