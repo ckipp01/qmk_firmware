@@ -66,3 +66,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM encoder_keymaps[][2][2] = {
     [_QWERTY] =  { {_______, _______}, { KC_KB_VOLUME_UP, KC_KB_VOLUME_DOWN } }
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    torn_set_led(0, IS_LAYER_ON_STATE(state, _SECONDARY));
+    return state;
+}
